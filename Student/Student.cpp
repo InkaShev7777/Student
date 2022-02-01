@@ -45,7 +45,6 @@ int main()
 			col.Add_St(st);
 			system("pause");
 			system("cls");
-
 			break;
 		case 4:
 			system("cls");

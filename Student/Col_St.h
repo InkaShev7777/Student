@@ -6,20 +6,13 @@ struct Node
 	c_Student* val;
 	Node* next;
 	Node(){}
-	Node(c_Student* st)
-	{
-		this->next = nullptr;
-		this->val = st;
-	}
+	Node(c_Student* st){this->next = nullptr; this->val = st;}
 };
 class Col_St
 {
 	Node* head;
 public:
-	Col_St()
-	{
-		this->head = nullptr;
-	}
+	Col_St(){this->head = nullptr;}
 	void Add_St(c_Student* stud)
 	{
 		Node* tmp = this->head;
@@ -53,11 +46,10 @@ public:
 		f.open("Kol_student.txt",std::ios::out);
 		while (iter!= nullptr)
 		{
-			f << iter->val->getName()<<" ";
+			f << iter->val->getName()<<": ";
 			f << iter->val->getMas();
 			f << "\n";
 			iter = iter->next;
-		}
+		} 
 	}
 };
-
