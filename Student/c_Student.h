@@ -17,7 +17,7 @@ public:
 	{
 		this->name = name;
 		this->mas = nullptr;
-		this->size_mas = 0;
+		this->size_mas=0;
 	}
 	void Add_Mark(int mark)
 	{
@@ -62,6 +62,14 @@ public:
 			mass += ",";
 		}
 		return mass;
+	}
+	int getSize()
+	{
+		return this->size_mas;
+	}
+	void setName(std::string name)
+	{
+		this->name = name;
 	}
 };
 

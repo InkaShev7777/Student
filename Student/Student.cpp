@@ -19,6 +19,7 @@ int main()
 		cout << "4 - Print Student\n";
 		cout << "5 - Shoow All List Student\n";
 		cout << "6 - Sava in file.txt\n";
+		cout << "7 - Reading file\n";
 		cout << "0 - Exit\n";
 		cout << "Enter your vibor: ";
 		cin >> vibor;
@@ -61,6 +62,12 @@ int main()
 		case 6:
 			system("cls");
 			col.Save();
+			system("pause");
+			system("cls");
+			break;
+		case 7:
+			system("cls");
+			col.Reading(st);
 			system("pause");
 			system("cls");
 			break;
