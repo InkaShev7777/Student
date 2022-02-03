@@ -57,7 +57,7 @@ public:
 		} 
 		f.close();
 	}
-	void Reading(c_Student* st)
+	void Reading()
 	{
 		Node* tmp = this->head;
 		std::ifstream f;
@@ -66,7 +66,7 @@ public:
 		int n;
 		f >> size_file;
 		f >> n;
-		while(!f.eof())
+		for(int j = 0;j < size_file;j++)
 		{
 			std::string name;
 			int mr;

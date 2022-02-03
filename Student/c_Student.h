@@ -74,12 +74,12 @@ public:
 	}
 	void sred()
 	{
-		double sr=0;
-		for (int i = 0; i < this->size_mas; i++)
+		double sr = 0;
+		for (int i = 0; i < this->getSize(); i++)
 		{
 			sr += mas[i];
 		}
-		std::cout <<"Name: "<<this->name<< "\tSred: " << sr / this->size_mas << "\n";
+		std::cout <<"Name: "<<this->name<< "\tSred: " << sr / size_mas << "\n";
 	}
 };
 

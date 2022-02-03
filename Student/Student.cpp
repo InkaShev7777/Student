@@ -69,7 +69,7 @@ int main()
 			break;
 		case 7:
 			system("cls");
-			col.Reading(st);
+			col.Reading();
 			system("pause");
 			system("cls");
 			break;
