@@ -47,7 +47,7 @@ public:
 		Node* iter = this->head;
 		std::fstream f;
 		f.open("Kol_student.txt",std::ios::out);
-		f << this->size << "\n";
+		f << this->size << " "<<iter->val->getSize() << "\n";
 		while (iter!= nullptr)
 		{
 			f << iter->val->getName()<<" ";
@@ -59,23 +59,36 @@ public:
 	}
 	void Reading(c_Student* st)
 	{
-		
-		
 		Node* tmp = this->head;
 		std::ifstream f;
 		f.open("Kol_student.txt");
 		int size_file;
+		int n;
 		f >> size_file;
+		f >> n;
 		while(!f.eof())
 		{
 			std::string name;
 			int mr;
 			f >> name;
-			st->setName(name);
-			f >> mr;
-			st->Add_Mark(mr);
-			mr = 0;
+			c_Student* st1 = new c_Student(name);
+			for (int i = 0; i < n; i++)
+			{
+				f >> mr;
+				st1->Add_Mark(mr);
+				mr = 0;
+			}
+			this->Add_St(st1);
 		}
 		f.close();
+	}
+	void Sred()
+	{
+		Node* iter = this->head;
+		while (iter!= nullptr)
+		{
+			iter->val->sred();
+			iter = iter->next;
+		}
 	}
 };

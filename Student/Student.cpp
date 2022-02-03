@@ -10,6 +10,7 @@ int main()
 	int vibor;
 	std::string name;
 	int mark;
+	int f = 0;
 	do
 	{
 		cout << "\t\tMenu\n";
@@ -20,6 +21,7 @@ int main()
 		cout << "5 - Shoow All List Student\n";
 		cout << "6 - Sava in file.txt\n";
 		cout << "7 - Reading file\n";
+		cout << "8 - Sred value\n";
 		cout << "0 - Exit\n";
 		cout << "Enter your vibor: ";
 		cin >> vibor;
@@ -68,6 +70,12 @@ int main()
 		case 7:
 			system("cls");
 			col.Reading(st);
+			system("pause");
+			system("cls");
+			break;
+		case 8:
+			system("cls");
+			col.Sred();
 			system("pause");
 			system("cls");
 			break;

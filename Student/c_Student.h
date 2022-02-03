@@ -39,6 +39,7 @@ public:
 		  std::cout << "Name: " << this->name<<"\nMark: ";
 		  for (int i = 0; i < this->size_mas; i++)
 		  {
+			  if(mas[i]!= 0)
 			std::cout << this->mas[i] << " ";
 		  }
 		  std::cout << "\n";
@@ -59,7 +60,7 @@ public:
 		for (int i = 0; i < size_mas; i++)
 		{
 			mass += std::to_string(mas[i]);
-			mass += ",";
+			mass += " ";
 		}
 		return mass;
 	}
@@ -70,6 +71,15 @@ public:
 	void setName(std::string name)
 	{
 		this->name = name;
+	}
+	void sred()
+	{
+		double sr=0;
+		for (int i = 0; i < this->size_mas; i++)
+		{
+			sr += mas[i];
+		}
+		std::cout <<"Name: "<<this->name<< "\tSred: " << sr / this->size_mas << "\n";
 	}
 };
 
