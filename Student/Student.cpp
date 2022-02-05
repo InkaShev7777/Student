@@ -37,9 +37,12 @@ int main()
 			break;
 		case 2:
 			system("cls");
-			cout << "Enter mark: ";
-			cin >> mark;
-			st->Add_Mark(mark);
+			for (int i = 0; i < 5; i++)
+			{
+				cout << "Enter mark: ";
+				cin >> mark;
+				st->Add_Mark(mark);
+			}
 			system("pause");
 			system("cls");
 			break;
@@ -81,6 +84,5 @@ int main()
 			break;
 		}
 	} while (vibor != 0);
-
 }
 

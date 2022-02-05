@@ -47,7 +47,7 @@ public:
 		Node* iter = this->head;
 		std::fstream f;
 		f.open("Kol_student.txt",std::ios::out);
-		f << this->size << " "<<iter->val->getSize() << "\n";
+		f << this->size<< "\n";
 		while (iter!= nullptr)
 		{
 			f << iter->val->getName()<<" ";
@@ -63,16 +63,14 @@ public:
 		std::ifstream f;
 		f.open("Kol_student.txt");
 		int size_file;
-		int n;
 		f >> size_file;
-		f >> n;
 		for(int j = 0;j < size_file;j++)
 		{
 			std::string name;
 			int mr;
 			f >> name;
 			c_Student* st1 = new c_Student(name);
-			for (int i = 0; i < n; i++)
+			for (int i = 0; i < 5; i++)
 			{
 				f >> mr;
 				st1->Add_Mark(mr);

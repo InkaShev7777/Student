@@ -30,7 +30,7 @@ public:
 		this->mas = v_mas;
 		v_mas = nullptr;
 		delete v_mas;
-		size_mas++;
+		this->size_mas++;
 	}
 	void print()
 	{
@@ -75,11 +75,11 @@ public:
 	void sred()
 	{
 		double sr = 0;
-		for (int i = 0; i < this->getSize(); i++)
+		for (int i = 0; i < 5; i++)
 		{
 			sr += mas[i];
 		}
-		std::cout <<"Name: "<<this->name<< "\tSred: " << sr / size_mas << "\n";
+		std::cout <<"Name: "<<this->name<< "\tSred: " << sr / 5 << "\n";
 	}
 };
 
